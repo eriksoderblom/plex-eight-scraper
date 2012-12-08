@@ -1,2 +1,1 @@
-xbmc-scraper
-============
+## IMDb Scraper for Plex 0.8
