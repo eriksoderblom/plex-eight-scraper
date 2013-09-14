@@ -246,12 +246,12 @@
         </GetTrailer>
     <GetIMDBPoster dest="5">
         <RegExp input="$$8$$9$$10$$11" output="&lt;details&gt;&lt;thumbs&gt;\1&lt;/thumbs&gt;&lt;/details&gt;" dest="5">
-                        <RegExp input="$$1" output="\1_SX$INFO[imdbscale]_SY$INFO[imdbscale]_\2" dest="6">
-                            <expression noclean="1,2">img_primary.{0,250}src=&quot;(.*?)_S.*?(.jpg)&quot;.itemprop=&quot;image&quot;</expression>
-                        </RegExp>
-                        <RegExp input="$$6" output="&lt;thumb&gt;\1&lt;/thumb&gt;" dest="11">
-                            <expression clear="yes" noclean="1">(.*?_SX[0-9]+_SY[0-9]+_.jpg)</expression>
-                        </RegExp>
+            <RegExp input="$$1" output="\1_SX$INFO[imdbscale]_SY$INFO[imdbscale]_\2" dest="6">
+                <expression noclean="1,2">img_primary.{0,250}src=&quot;(.*?)_V1.*?(.jpg)&quot;.itemprop=&quot;image&quot;</expression>
+            </RegExp>
+            <RegExp input="$$6" output="&lt;thumb&gt;\1&lt;/thumb&gt;" dest="11">
+                <expression clear="yes" noclean="1">(.*?_SX[0-9]+_SY[0-9]+_.jpg)</expression>
+            </RegExp>
             <expression noclean="1"></expression>
         </RegExp>
     </GetIMDBPoster>
@@ -263,7 +263,7 @@
     <GetTMDBFanart dest="5">
         <RegExp input="$$2" output="&lt;details&gt;&lt;fanart url=&quot;http://d3gtl9l2a4fn1j.cloudfront.net/t/p&quot;&gt;\1&lt;/fanart&gt;&lt;/details&gt;" dest="5">
             <RegExp input="$$1" output="&lt;thumb preview=&quot;/w300/\1.jpg&quot;&gt;/original/\1.jpg&lt;/thumb&gt;" dest="2">
-                <expression repeat="yes">class=&quot;item&quot;.{0,16}class=&quot;image&quot;.{0,80}class=&quot;lightbox&quot; href=&quot;http://d3gtl9l2a4fn1j.cloudfront.net/t/p/original/([A-Za-z0-9]+).jpg&quot;&gt;</expression>
+                <expression repeat="yes">&lt;image type=&quot;backdrop&quot; url=&quot;http://d3gtl9l2a4fn1j.cloudfront.net/t/p/original/([A-Za-z0-9]+).jpg&quot; size=&quot;original&quot; [^&lt;&gt;]+/&gt;</expression>
             </RegExp>
             <expression noclean="1">(.+)</expression>
         </RegExp>
