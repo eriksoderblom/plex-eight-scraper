@@ -1,5 +1,7 @@
 ### IMDb Scraper for Plex 0.8
 
+*2013-12-21* - Updated scraper, new TMDb url
+
 *2013-12-05* - Updated scraper, fix plot
 
 *2013-09-15* - Updated scraper

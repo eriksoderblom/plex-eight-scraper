@@ -127,10 +127,10 @@
             <RegExp input="$$2" output="&lt;url cache=&quot;$$2-posters.html&quot; function=&quot;GetIMDBPoster&quot;&gt;$$3posters&lt;/url&gt;" dest="5+">
                 <expression></expression>
             </RegExp>
-            <RegExp conditional="fanart" input="$$1" output="&lt;url function=&quot;GetTMDBFanart&quot;&gt;http://api.themoviedb.org/3/movie/tt\1?api_key=57983e31fb435df4df77afb854740ea9&lt;/url&gt;" dest="5+">
+            <RegExp conditional="fanart" input="$$1" output="&lt;url function=&quot;GetTMDBFanart&quot;&gt;http://api.tmdb.org/3/movie/tt\1?api_key=57983e31fb435df4df77afb854740ea9&lt;/url&gt;" dest="5+">
                 <expression>/title/tt([t0-9]+)/</expression>
             </RegExp>
-            <RegExp conditional="fanart" input="$$1" output="&lt;url function=&quot;GetTMDBId&quot;&gt;http://api.themoviedb.org/3/movie/tt\1?api_key=57983e31fb435df4df77afb854740ea9&lt;/url&gt;" dest="5+">
+            <RegExp conditional="fanart" input="$$1" output="&lt;url function=&quot;GetTMDBId&quot;&gt;http://api.tmdb.org/3/movie/tt\1?api_key=57983e31fb435df4df77afb854740ea9&lt;/url&gt;" dest="5+">
                 <expression>/title/tt([t0-9]+)/</expression>
             </RegExp>
             <expression noclean="1"></expression>
@@ -256,7 +256,7 @@
         </RegExp>
     </GetIMDBPoster>
     <GetTMDBId dest="5">
-        <RegExp conditional="fanart" input="$$1" output="&lt;details&gt;&lt;url function=&quot;GetTMDBFanart&quot;&gt;http://api.themoviedb.org/3/movie/\1/images?api_key=57983e31fb435df4df77afb854740ea9&lt;/url&gt;&lt;/details&gt;" dest="5">
+        <RegExp conditional="fanart" input="$$1" output="&lt;details&gt;&lt;url function=&quot;GetTMDBFanart&quot;&gt;http://api.tmdb.org/3/movie/\1/images?api_key=57983e31fb435df4df77afb854740ea9&lt;/url&gt;&lt;/details&gt;" dest="5">
             <expression>&quot;id&quot;:([0-9]*).&quot;imdb_id&quot;:&quot;tt[0-9]*&quot;</expression>
         </RegExp>
     </GetTMDBId>
